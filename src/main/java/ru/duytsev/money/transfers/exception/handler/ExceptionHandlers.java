@@ -40,44 +40,5 @@ interface ExceptionHandlers {
                     build();
         }
     }
-
-    /*@Provider
-    @Slf4j
-    class ResourceNotFoundHandler implements ExceptionMapper<ResourceNotFoundException> {
-        @Override
-        public Response toResponse(ResourceNotFoundException exception) {
-            log.error("ResourceNotFoundHandler", exception);
-            return Response.status(HttpStatus.NOT_FOUND_404).
-                    entity(ModelWrapper.wrapError(new Error(2, exception.getMessage()))).
-                    type("application/json").
-                    build();
-        }
-    }
-
-    @Provider
-    @Slf4j
-    class NegativeBalanceHandler implements ExceptionMapper<NegativeBalanceException> {
-        @Override
-        public Response toResponse(NegativeBalanceException exception) {
-            log.error("NegativeBalanceHandler", exception);
-            return Response.status(HttpStatus.CONFLICT_409).
-                    entity(ModelWrapper.wrapError(new Error(3, exception.getMessage()))).
-                    type("application/json").
-                    build();
-        }
-    }
-
-    @Provider
-    @Slf4j
-    class NotEnoughMoneyHandler implements ExceptionMapper<NotEnoughMoneyException> {
-        @Override
-        public Response toResponse(NotEnoughMoneyException exception) {
-            log.error("NotEnoughMoneyHandler", exception);
-            return Response.status(HttpStatus.NOT_ACCEPTABLE_406).
-                    entity(ModelWrapper.wrapError(new Error(4, exception.getMessage()))).
-                    type("application/json").
-                    build();
-        }
-    }*/
 }
 
