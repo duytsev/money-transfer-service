@@ -1,5 +1,7 @@
 # money-transfer-service
 
+The main idea was to create a java service that provides a restful API using minimalistic approach. So no frameworks were used except for Jersey as JAX-RS implementation. The application and controller tests are run on embedded Jetty server.
+
 Run app on port 8090
 ```
 ./gradlew build   
