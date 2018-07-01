@@ -61,7 +61,7 @@ public class TransactionController {
     }
 
     private void validateAmount(BigDecimal amount) {
-        if (amount.compareTo(BigDecimal.ZERO) < 0) {
+        if (amount.compareTo(BigDecimal.ZERO) <= 0) {
             throw new ValidationException("Amount has to be positive number, amount: " + amount);
         }
     }

@@ -69,6 +69,7 @@ public class AccountRepository {
 
     public void clear() {
         accounts.clear();
+        transactions.clear();
     }
 
     public Collection<Transaction> listTransactions() {
