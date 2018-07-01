@@ -17,21 +17,9 @@ import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.greaterThan;
 
-public class AccountControllerTest {
+public class AccountControllerTest extends BaseControllerTest {
 
-    private static final int PORT = 8085;
-    private static final String BASE_URL = "http://localhost:8085/api/v1";
     private static final String ACCOUNTS = "/accounts";
-
-    @BeforeClass
-    public static void setup() throws Exception {
-        Application.start(PORT);
-    }
-
-    @AfterClass
-    public static void teardown() throws Exception {
-        Application.stop();
-    }
 
     @Test
     public void testAccountCreate() {
