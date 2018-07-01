@@ -4,7 +4,7 @@ The main idea was to create a java service that provides a restful API using min
 
 Run app on port 8090
 ```
-./gradlew build   
+./gradlew build (builds an executable jar and run tests on port 8085)
 java -jar build/libs/money-transfers-service-1.0-SNAPSHOT.jar 8090
 ```
 
