@@ -6,7 +6,7 @@ apply plugin: 'java'
 ext {
     slf4jVersion = '1.7.25'
     jettyVersion = '9.4.6.v20170531'
-    jerseyVersion = '2.25.1'
+    jerseyVersion = '2.26-b03'
 }
 
 sourceCompatibility = 1.8
@@ -33,4 +33,16 @@ dependencies {
     compile "org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyVersion}"
 
     compile "org.projectlombok:lombok:1.16.12"
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'ru.duytsev.money.transfers.Application'
+        )
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }

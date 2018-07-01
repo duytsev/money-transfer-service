@@ -32,7 +32,8 @@ public class Application {
         servletHolder.setInitOrder(0);
         servletHolder.setInitParameter(
                 "jersey.config.server.provider.packages",
-                "ru.duytsev.money.transfers"
+                "ru.duytsev.money.transfers;" +
+                      "com.fasterxml.jackson.jaxrs.json"
         );
         server.start();
     }
